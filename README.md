@@ -1,7 +1,15 @@
 # AquaSight — End-to-End AI Water Quality Monitoring System
 
-An end-to-end system for water quality monitoring and forecasting, covering:
-**data preprocessing → feature engineering → model training/evaluation → REST API → LINE chatbot → web dashboard**.
+An end-to-end AI system for real-time water quality monitoring and forecasting, 
+designed to automate the full pipeline from raw environmental data to actionable insights.
+
+## Use Case
+- Environmental monitoring for early detection of water quality degradation
+- Supports decision-making for agencies or communities
+- Automated alerting via LINE chatbot for real-time updates
+
+## System Architecture
+Raw Data → Preprocessing → Feature Engineering → ML Models → API → LINE Bot / Web Dashboard
 
 ## Repository Structure
 - `model/` — ML experiments (ARIMA / LSTM / SVM), training notebooks, evaluation results
@@ -10,20 +18,19 @@ An end-to-end system for water quality monitoring and forecasting, covering:
 - `web/` — Next.js dashboard for visualization and monitoring
 
 ## Key Features
-- Multi-station water-quality time series preparation (raw → cleaned → prepared)
-- Statistical analysis & visualization outputs (figures, stats json)
-- Forecast generation and serving predictions via REST API
-- User-facing delivery through LINE bot + web dashboard
+- Multi-station water-quality time series pipeline (raw → cleaned → prepared)
+- Statistical analysis & visualization outputs
+- Real-time forecasting pipeline with REST API for scalable prediction serving
+- Automated notification system via LINE chatbot
+- Interactive web dashboard for monitoring and insights
+
+## Models
+- ARIMA (baseline)
+- LSTM (deep learning)
+- SVM (comparison model)
 
 ## Tech Stack
-- Python (pandas, numpy, scikit-learn), notebooks
-- API: (your framework in `api/backend/app` — FastAPI/Flask; update here)
-- Web: Next.js (TypeScript)
+- Python (pandas, numpy, scikit-learn)
+- FastAPI (REST API)
+- Next.js (TypeScript)
 - LINE Messaging API
-
-## Quick Start
-### 1) API
-```bash
-cd api/backend
-pip install -r requirements.txt
-# run command: update according to your framework (e.g., uvicorn app.main:app --reload)
